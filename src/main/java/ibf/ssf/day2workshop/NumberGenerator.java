@@ -1,16 +1,18 @@
 
 package ibf.ssf.day2workshop;
 
+import java.io.ObjectStreamClass;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.random.RandomGenerator;
 
 import org.springframework.stereotype.Component;
 
 @Component
 public class NumberGenerator implements Serializable {
+
+	static final long serialVersionUID = ObjectStreamClass.lookup(NumberGenerator.class).getSerialVersionUID();
 
 	private int numInput;
 	private List<Integer> nums = new ArrayList<>();
